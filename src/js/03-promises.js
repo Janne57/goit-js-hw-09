@@ -7,6 +7,7 @@ const refs = {
 
 refs.formCreateProm.addEventListener('submit', onSubmit);
 
+let intervalId = null;
 
 function createPromise(position, delay) {
   return new Promise((resolve, reject) => {
@@ -33,7 +34,7 @@ function  onSubmit(event) {
   const delay = Number(refs.formElements['delay'].value);
   const step = Number(refs.formElements['step'].value);
   const position = Number(refs.formElements['amount'].value);
-  intervalId: null;
+ 
 
   intervalId = setInterval(function timeout(){
  
