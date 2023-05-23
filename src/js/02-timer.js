@@ -15,6 +15,7 @@ refs.start.addEventListener ('click', () => {
 });
 
 let futureDay;
+let intervalId = null;
 
 const options = {
     enableTime: true,
@@ -39,7 +40,7 @@ refs.start.disabled = true;
 const futureDate = flatpickr('#datetime-picker', options);  
 
 const timer = {
-    intervalId: null,
+    
   
     start() {        
         intervalId  = setInterval(() => {
