@@ -48,10 +48,13 @@ const timer = {
             const deltaTime = futureDay.getTime() - currentDay;
             const time = convertMs(deltaTime);
             updateTime(time);
+            console.log('deltaTime', deltaTime);
+            
         
             if (deltaTime <= 990) {
                 clearInterval(intervalId);
                 Notiflix.Notify.warning("TIMER STOP!!!");
+                return;
                 }
         },
         1000);       
